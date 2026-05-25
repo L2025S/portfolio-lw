@@ -102,7 +102,7 @@
         if (githubProfileBtn) {
             githubProfileBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                alert("🔗 Link your GitHub profile: replace the href attribute with https://github.com/yourusername");
+                alert("🔗GitHub profile: https://github.com/L2025S");
             });
         }
 
