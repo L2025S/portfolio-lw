@@ -101,7 +101,7 @@
         }
 */
         // 4). ==========  UNIVERSAL LINK HANDLER USING data-url =================
-        document.querySelectorAll("data-url").forEach(btn => {
+        document.querySelectorAll("[data-url]").forEach(btn => {
             btn.addEventListener("click", function(e){
                 e.preventDefault();
 
