@@ -401,6 +401,13 @@ body.dark .skill-tag:hover {
     color: #1e1e1e;
 }
 
+/* all the clickable links */
+[data-url] {
+    cursor: pointer;
+    color: #0077ff;
+    text-decoration: underline;
+}
+
 /* PRINT OPTIMIZATION */
 @media print {
     body {
@@ -496,4 +503,7 @@ body.dark .skill-tag:hover {
 @keyframes slideIn {
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
+
+
 }
+

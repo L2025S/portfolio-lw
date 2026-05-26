@@ -63,7 +63,7 @@
         });
 
         // === 5. PLACEHOLDER LINK HANDLERS ===
-
+/*
         //  1). Repo Link
         const repoLink = document.getElementById('repoLinkPlaceholder');
         if (repoLink) {
@@ -88,7 +88,7 @@
             });
         }
 
-        // 3. Contact Email Button
+        // 3). Contact Email Button
         const contactEmailBtn = document.getElementById('contactEmailBtn');
         if (contactEmailBtn) {
             contactEmailBtn.addEventListener('click', function(e) {
@@ -99,8 +99,8 @@
                 }
             });
         }
-
-        // 4) ==========  UNIVERSAL LINK HANDLER USING data-url =================
+*/
+        // 4). ==========  UNIVERSAL LINK HANDLER USING data-url =================
         document.querySelectorAll("data-url").forEach(btn => {
             btn.addEventListener("click", function(e){
                 e.preventDefault();
