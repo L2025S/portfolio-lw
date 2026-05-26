@@ -63,27 +63,40 @@
         });
 
         // === 5. PLACEHOLDER LINK HANDLERS ===
+
+        //  1). Repo Link
         const repoLink = document.getElementById('repoLinkPlaceholder');
         if (repoLink) {
             repoLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                alert("✨ Replace with your actual GitHub repository URL.\nExample: https://github.com/yourusername/project-name");
+                const go = confirm("This link leads to an external site. Do you want to proceed? ");
+                if(go){
+                    window.open(repoLink.href,'_blank');
+                }
             });
         }
 
+        // 2).GitHub Profile Link
         const githubProfileBtn = document.getElementById('githubProfileBtn');
         if (githubProfileBtn) {
             githubProfileBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                alert("🔗GitHub profile: https://github.com/L2025S");
+                const go = confirm("You are about to open the Github profile. Do you want to proceed? ");
+                if(go) {
+                    window.open(githubprofileBtn.href, '_blank');
+                }
             });
         }
 
+        // 3. Contact Email Button
         const contactEmailBtn = document.getElementById('contactEmailBtn');
         if (contactEmailBtn) {
             contactEmailBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                alert("📧 Replace the href attribute with mailto:your.email@example.com");
+                const go = confirm("This will open your email client. Continue?")
+                if(go){
+                    window.location.href = contactEmailBtn.href;
+                }
             });
         }
 
