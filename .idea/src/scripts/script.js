@@ -39,34 +39,7 @@
             });
         }
 
-        // === 3. PDF EXPORT using html2pdf ===
-        const pdfBtn = document.getElementById('pdfExportBtn');
-        if (pdfBtn) {
-            pdfBtn.addEventListener('click', function() {
-                const element = document.getElementById('resumeCard');
-                if (!element) return;
 
-                // Store original padding to restore after export
-                const originalPadding = element.style.padding;
-                element.style.padding = '1rem';
-
-                const opt = {
-                    margin: [0.5, 0.5, 0.5, 0.5],
-                    filename: 'resume_template.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2, letterRendering: true, useCORS: true, logging: false },
-                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-                };
-
-                html2pdf().set(opt).from(element).save().then(function() {
-                    element.style.padding = originalPadding;
-                }).catch(function(err) {
-                    console.warn("PDF export error, falling back to print:", err);
-                    window.print();
-                    element.style.padding = originalPadding;
-                });
-            });
-        }
 
         // === 4. INTERACTIVE ANIMATIONS ===
 
