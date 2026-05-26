@@ -100,6 +100,24 @@
             });
         }
 
+        // 4) ==========  UNIVERSAL LINK HANDLER USING data-url =================
+        document.querySelectorAll("data-url").forEach(btn => {
+            btn.addEventListener("click", function(e){
+                e.preventDefault();
+
+                const url = btn.dataset.url; // Read data-url
+                const go = confirm("This link leads to an external site. Do you want to proceed?");
+
+                if(go) {
+                    if(url.startsWith("mailto:")){
+                        window.location.href=url;
+                    } else {
+                        window.open(url, "_blank");
+                    }
+                }
+            })
+        })
+
         // === 6. SCROLL REVEAL ANIMATION ===
         const sections = document.querySelectorAll('.right-section, .sidebar-section');
 
