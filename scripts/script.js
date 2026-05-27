@@ -106,7 +106,7 @@
                 e.preventDefault();
 
                 const url = btn.dataset.url; // Read data-url
-                const go = confirm("This link leads to an external site. Do you want to proceed?");
+                const go = confirm("This link leads to another webpage. Do you want to proceed?");
 
                 if(go) {
                     if(url.startsWith("mailto:")){
