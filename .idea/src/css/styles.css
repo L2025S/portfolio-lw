@@ -404,7 +404,6 @@ body.dark .skill-tag:hover {
 /* all the clickable links */
 [data-url] {
     cursor: pointer;
-    color: #0077ff;
     text-decoration: underline;
 }
 
